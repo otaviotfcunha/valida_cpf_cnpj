@@ -1,0 +1,110 @@
+	body{
+		font-family: verdana;
+		background-color: #E0FFFF;
+	}
+	h1, h2, h3, h4, h5{
+		color: #fff;
+		padding: 10px;
+		background-color: #008080;	
+	}
+	.center {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 60%;
+	}
+	.container{
+		width: 70%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	form{
+		width: 50%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	input{
+		font-size: 16px;
+		width: 100%;
+	}
+	.label{
+		display: flex;
+		width: 25%;
+		overflow: hidden;
+	}
+	.input{
+		display: flex;
+		width: 75%;
+	}
+	.input p{
+		background-color: #d1d1d1;
+		color: #000;
+	}
+	.campos{
+		width: 100%;
+		display: flex;
+		margin-bottom: 5px;
+	}
+	.btn-enviar{
+		background-color: #006400;
+		color: #fff;
+		font-size: 20px;
+		border-radius: 35px;
+		padding: 5px 60px;
+		border-color: #008000;
+		width: 100%;
+		text-align: center;
+	}
+	.btn-enviar:hover{
+		background-color: #32CD32;
+		color: #000;
+		border-color: #00FF00;
+		transition: 500ms;
+	}
+	.btn-reset{
+		background-color: #FF8C00;
+		color: #fff;
+		font-size: 20px;
+		border-radius: 35px;
+		padding: 5px 60px;
+		border-color: #FFA500;
+		width: 100%;
+		text-align: center;
+	}
+	.btn-reset:hover{
+		background-color: #FFD700;
+		color: #000;
+		border-color: #FFFF00;
+		transition: 500ms;
+	}
+	.btn-voltar{
+		background-color: #800000;
+		color: #fff;
+		font-size: 20px;
+		border-radius: 35px;
+		padding: 5px 60px;
+		border-color: #8B0000;
+		width: 100%;
+		text-align: center;
+	}
+	.btn-voltar:hover{
+		background-color: #FA8072;
+		color: #000;
+		border-color: #E9967A;
+		transition: 500ms;
+	}
+	.btn{
+		width: 50%;
+		padding: 10px;
+	}
+	#display{
+		margin-left: 3%;
+	}
+	#container-formulario{
+		display: block;
+	}	
+	#container-conteudo{
+		display: none;
+	}

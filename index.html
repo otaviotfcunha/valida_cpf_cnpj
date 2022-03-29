@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<title>Formulário HTML</title>
+		<meta charset="utf-8">
+		<meta name="author" content="Otávio T. F. da Cunha" />
+		<meta name="description" content="Formulário em html" />
+		<meta name="keywords" content="formulario, html, cadastro, fatec" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="robots" content="index, follow">
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="css/style.css">
+		<!-- MÁSCARA CPF/CNPJ -->
+		<script type="text/javascript" language="javascript" src="js/jq.js"></script>
+		<script src="js/mask.js"></script>
+		<script src="js/cpf_cnpj.js"></script>
+		<script>
+			var options = {
+				onKeyPress: function (cpf, ev, el, op) {
+					var masks = ['000.000.000-000', '00.000.000/0000-00'];
+					$('.cpfOuCnpj').mask((cpf.length > 14) ? masks[1] : masks[0], op);
+				}
+
+			}
+			window.onload = function() {
+				var tamanho = $(".cpfOuCnpj").val().length;
+				if(tamanho > 14){
+					$('.cpfOuCnpj').mask('00.000.000/0000-00', options);
+				}else{
+					$('.cpfOuCnpj').mask('000.000.000-00', options);
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div class="container" id="container-formulario">
+			<h1 align="center">Formulário de Cadastro</h1>
+			<form method="POST" action="">
+				<div class="campos">
+					<div class="label">
+						<label for="nome">Nome: </label>
+					</div>
+					<div class="input">
+						<input type="text" name="nome" id="nome" placeholder="Fulano de tal" required>
+					</div>
+				</div>
+				<div class="campos">
+					<div class="label">
+						<label for="cpf">CPF: </label>
+					</div>
+					<div class="input">
+						<input type="text" class="cpfOuCnpj cpf_cnpj" name="cpf" id="cpf" placeholder="000.000.000-00" required>
+					</div>
+				</div>
+				<div class="campos">
+					<div class="btn">
+						<button type="button" class="btn-enviar">Enviar</button>
+					</div>
+					<div class="btn">
+						<button type="reset" class="btn-reset">Limpar</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
+
+
+
+
